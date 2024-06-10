@@ -1,0 +1,41 @@
+<div
+  class="bg-gray-700 fixed top-0 left-0 right-0 text-xl grid grid-cols-4 text-white h-14 md:h-16 p-3"
+>
+  <div class="flex items-center">
+    <ng-icon
+      name="ionMenuOutline"
+      (click)="toggleMenu()"
+      class="text-2xl"
+    ></ng-icon>
+  </div>
+  <div class="flex items-center justify-center col-span-2">
+    <h1>Admin</h1>
+  </div>
+</div>
+<div
+  class="bg-gray-700 text-white absolute left-0 top-0 bottom-0 w-11/12 transition-transform -translate-x-full duration-300 text-xl overflow-y-auto shadow-xl md:translate-x-0 md:w-56"
+  [class.translate-x-0]="isOpen"
+>
+  <div class="h-14 flex items-center p-3">
+    <h1>Admin</h1>
+    <div class="md:hidden">
+      <ng-icon
+        name="ionCloseOutline"
+        (click)="toggleMenu()"
+        class="text-2xl"
+      ></ng-icon>
+    </div>
+  </div>
+  <ul>
+    <li
+      *ngFor="let item of navItems"
+      class="p-3 hover:bg-gray-600 flex items-center text-lg space-x-3"
+      routerLinkActive="bg-gray-600"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="item.link"
+    >
+      <ng-icon [svg]="item.icon"></ng-icon>
+      <p>{{ item.title }}</p>
+    </li>
+  </ul>
+</div>

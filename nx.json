@@ -70,8 +70,15 @@
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "jest"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nx/angular:component": {
+      "style": "css"
     }
   },
   "defaultProject": "bpkids",
-  "nxCloudAccessToken": "ZTg0NjNkNTYtNGI5MS00MjVlLTk4ZTAtNjg5YTRkNWM3ZTBkfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MWU1M2U2ZmQtNzkyYi00Njc2LWI3MTctZjBjMDIxNzcyZGJjfHJlYWQtd3JpdGU="
 }
